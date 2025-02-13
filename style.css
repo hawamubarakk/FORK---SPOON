@@ -22,6 +22,10 @@ header h1 {
 
 /* Navigation Bar */
 nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000%;
     display: flex;
     justify-content: center;
     background-color: black;
@@ -29,13 +33,13 @@ nav {
 }
 
 nav a {
+    flex-grow: 1;
     text-decoration: none;
     padding: 10px;
     color: white;
     text-align: center;
 }
 
-/* Main Content */
 main {
     background-color: rgb(255, 255, 255);
     text-align: center;
@@ -55,18 +59,7 @@ section:nth-child(even) {
     background-color: rgb(241, 241, 241);
 }
 
-section h5 {
-    margin: 40px;
-}
 
-/* Video and iframe */
-video {
-    padding: 10px;
-}
-
-iframe {
-    height: 75vh;
-}
 
 /* Image Styling */
 img {
@@ -205,6 +198,7 @@ footer a {
     font-size: 16px;
 }
 
+
 .map {
     margin-top: 30px;
 }
@@ -282,3 +276,7 @@ footer a {
 .order-btn:hover {
     background-color: #0d5a73;
 }
+html {
+    scroll-behavior: smooth;
+}
+
