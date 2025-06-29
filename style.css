@@ -1,0 +1,419 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Header */
+header {
+    padding: 10px;
+    background-color:#2e1a47;
+    text-align: center;
+    color: white;
+}
+
+header h1 {
+    font-size: 60px;
+}
+
+/* Navigation Bar */
+nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* adds spacing between nav links */
+    background-color: #3c264e;
+    padding: 15px 20px;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 10px 15px; /* internal spacing */
+    color: #ffd700;
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #ffffff30;
+    color: #f0f0f0;
+}
+main {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+h2 {
+    padding: 20px;
+}
+
+/* Section Styling */
+section {
+    min-height: 100vh;
+    padding: 20px;
+}
+
+section:nth-child(even) {
+    background-color: rgb(241, 241, 241);
+}
+
+
+
+/* Image Styling */
+img {
+    padding: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    text-decoration: none;
+    padding: 20px;
+    color: white;
+}
+
+/* Menu Section */
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 40px 20px;
+    justify-items: center;
+}
+#menu h2 {
+    font-size: 42px;
+    margin-bottom: 10px;
+    color: #2e1a47;
+}
+
+#menu h3 {
+    font-size: 30px;
+    margin-top: 60px;
+    margin-bottom: 25px;
+    color: #3c264e;
+    border-bottom: 2px solid #ddd;
+    display: inline-block;
+    padding-bottom: 6px;
+}
+
+.menu-intro {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.dish {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+}
+
+.dish:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.dish img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    background-color: #fff; /* optional: keeps background clean */
+    padding: 10px; /* optional: adds breathing room around image */
+}
+
+.dish h3 {
+    font-size: 20px;
+    color: #2d3748;
+    margin: 10px 0;
+}
+
+.dish p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+}
+.about-us {
+    text-align: center;
+    padding: 70px 50px;
+    background-color: #f1eef5; /* light purple tint */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* If "What Makes Us Unique" is part of .about-us, apply these to .about-us h2 & h3 */
+
+.about-us h2 {
+    font-size: 36px;
+    color: #2e1a47; /* deep purple */
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.about-us h3 {
+    font-size: 28px;
+    color: #3c264e; /* secondary purple */
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+
+.about-us {
+    background-color: #f5f0fa; /* very light lavender/purple tint */
+}
+
+
+.about-us p {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #4a4a6f; /* dark grayish purple for readability */
+    max-width: 900px;
+    margin: 0 auto 40px;
+}
+
+.about-us ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.about-us ul li {
+    font-size: 18px;
+    background: #3c264e; /* matches navbar */
+    color: #ffd700; /* same gold/yellow as nav text */
+    padding: 15px 25px;
+    margin: 10px;
+    border-radius: 8px;
+    white-space: nowrap;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.about-us ul li:hover {
+    background-color: #2e1a47; /* header color */
+    color: white; /* contrast on hover */
+}
+.contact-section {
+    background-color: #f1f1f1; /* Light grey background */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact-section h2 {
+    color: #2e1a47; /* match your header/nav color */
+}
+.contact-section p {
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: #555;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap; /* Responsive support */
+}
+
+.contact-item {
+    background-color: #3c264e;
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    background-color: #2e1a47; /* deeper purple on hover */
+}
+
+.contact-item h3 {
+    color: #ffd700; /* yellow headings inside the box */
+}
+.contact-item p {
+    color: white;
+}
+
+
+.map {
+    margin-top: 30px;
+}
+
+.map iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.order-section {
+    background-color: #f5f0fa; /* soft lavender background */
+    padding: 60px 20px;
+    text-align: center;
+    border-top: 3px solid #3c264e;
+    border-bottom: 3px solid #3c264e;
+}
+
+.order-section h2 {
+    font-size: 36px;
+    color: #2e1a47; /* main purple */
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.order-section p {
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: #4a4a6f;
+}
+.order-form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #3c264e; /* purple form background */
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    color: white;
+}
+
+.input-group label {
+    font-weight: 600;
+    color: #ffd700; /* gold/yellow label */
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-top: 5px;
+}
+
+.order-btn {
+    background-color: #ffd700; /* bright yellow button */
+    color: #3c264e; /* dark text */
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.order-btn:hover {
+    background-color: #e6c200;
+    transform: scale(1.05);
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.payment-options {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.order-btn {
+    background-color: white;
+    color: #3c264e;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.order-btn:hover {
+    background-color: white;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+.hero-section {
+    height: 100vh; /* Full screen */
+    background-image: url('12.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    padding: 0 20px;
+}
+
+.hero-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* dark overlay for better text visibility */
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+}
+
+.hero-content h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    line-height: 1.6;
+}
