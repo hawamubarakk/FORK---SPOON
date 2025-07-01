@@ -65,11 +65,11 @@ website link: https://fork-spoon-aq5l.vercel.app/
 ├── index.html
 ├── style.css
 ├── README.md
-<<<<<<< HEAD
+
 └── images/
-=======
+
 └── static/images/
->>>>>>> main
+
 
 ## Setup and Installation
 

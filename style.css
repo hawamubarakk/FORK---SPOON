@@ -1,3 +1,5 @@
+
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,11 +13,7 @@ body {
 /* Header */
 header {
     padding: 10px;
-
-    background-color: rgb(19, 17, 143);
-
     background-color:#2e1a47;
-
     text-align: center;
     color: white;
 }
@@ -29,23 +27,6 @@ nav {
     position: sticky;
     top: 0;
     width: 100%;
-
-    z-index: 1000%;
-    display: flex;
-    justify-content: center;
-    background-color: black;
-    padding: 10px;
-}
-
-nav a {
-    flex-grow: 1;
-    text-decoration: none;
-    padding: 10px;
-    color: white;
-    text-align: center;
-}
-
-nav{
     z-index: 1000;
     display: flex;
     justify-content: center;
@@ -67,7 +48,6 @@ nav a:hover {
     background-color: #ffffff30;
     color: #f0f0f0;
 }
-
 main {
     background-color: rgb(255, 255, 255);
     text-align: center;
@@ -108,150 +88,103 @@ footer a {
     color: white;
 }
 
-/* Menu Section */
+/* Menu Section Container */
 .menu-container {
-
-    display: flex !important; /* Ensure Flexbox is applied */
-    justify-content: center; /* Centers items horizontally */
-    align-items: center; /* Aligns items vertically */
-    gap: 20px; /* Space between images */
-    width: 100%; /* Ensure full width */
-    flex-wrap: nowrap; /* Prevents wrapping */
-    padding: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  width: 100%;
+  padding: 40px 0;
 }
 
+/* Individual Dish Styling */
 .dish {
-    text-align: center; /* Centers text below image */
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-.dish img {
-    width: 300px; /* Adjust size */
-    height: 300px;
-    object-fit: cover;
-    border-radius: 10px; /* Optional: rounded corners */
-
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    padding: 40px 20px;
-    justify-items: center;
-}
-#menu h2 {
-    font-size: 42px;
-    margin-bottom: 10px;
-    color: #2e1a47;
-}
-
-#menu h3 {
-    font-size: 30px;
-    margin-top: 60px;
-    margin-bottom: 25px;
-    color: #3c264e;
-    border-bottom: 2px solid #ddd;
-    display: inline-block;
-    padding-bottom: 6px;
-}
-
-.menu-intro {
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 40px;
-}
-
-.dish {
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 100%;
-    max-width: 300px;
-}
-
+/* Hover Effect */
 .dish:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .dish img {
-    width: 100%;
-    height: 200px;
-    object-fit: contain;
-    background-color: #fff; /* optional: keeps background clean */
-    padding: 10px; /* optional: adds breathing room around image */
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 1px solid #f0f0f0;
+  border-radius: 10px;
+  background-color: #fff;
 }
 
-.dish h3 {
-    font-size: 20px;
-    color: #2d3748;
-    margin: 10px 0;
+/* Dish Titles */
+#menu h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-top: 40px;
+  color: #6a0dad; /* Purple */
 }
 
+/* Subsection Headings like Main Dishes, Desserts */
+#menu > h3 {
+  font-size: 1.5rem;
+  color: #6a0dad;
+  text-align: left;
+  padding-left: 10px;
+  margin-top: 40px;
+}
+
+.dish h3, .dish h4 {
+  font-size: 1.2rem;
+  color: #000;
+  text-align: center;
+  margin: 12px 0 4px;
+}
+
+/* Dish Prices */
 .dish p {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 15px;
-
+  font-size: 1rem;
+  color: #888;
+  margin-bottom: 15px;
 }
 .about-us {
     text-align: center;
     padding: 70px 50px;
-
-    background-color: #f3f4f6;
+    background-color: #f3e6ff; /* Light Lavender background */
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+/* Main Headings (About us, Vision & Mission, What Makes Us Unique) */
 .about-us h2 {
     font-size: 36px;
-    color: #2d3748;
-
-    background-color: #f1eef5; /* light purple tint */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-/* If "What Makes Us Unique" is part of .about-us, apply these to .about-us h2 & h3 */
-
-.about-us h2 {
-    font-size: 36px;
-    color: #2e1a47; /* deep purple */
-
+    color: #4b0082; /* Deep Purple */
     font-weight: bold;
     margin-bottom: 25px;
 }
 
+/* Subheadings (Vision, Mission) */
 .about-us h3 {
     font-size: 28px;
-
-    color: #4a5568;
+    color: #4b0082; /* Deep Purple */
     margin-top: 20px;
 }
 
+/* Paragraph text */
 .about-us p {
     font-size: 20px;
     line-height: 1.8;
-    color: #718096;
-
-    color: #3c264e; /* secondary purple */
-    margin-top: 20px;
-    font-weight: 600;
-}
-
-
-.about-us {
-    background-color: #f5f0fa; /* very light lavender/purple tint */
-}
-
-
-.about-us p {
-    font-size: 20px;
-    line-height: 1.8;
-    color: #4a4a6f; /* dark grayish purple for readability */
-
+    color: #333333; /* Dark Gray for visibility */
     max-width: 900px;
     margin: 0 auto 40px;
 }
 
+/* Feature list */
 .about-us ul {
     list-style: none;
     padding: 0;
@@ -259,268 +192,169 @@ footer a {
     justify-content: center;
     gap: 15px;
     flex-wrap: wrap;
+    margin-top: 30px;
 }
 
+/* Each feature badge */
 .about-us ul li {
     font-size: 18px;
-
-    background: #3182ce;
-    color: white;
-
-    background: #3c264e; /* matches navbar */
-    color: #ffd700; /* same gold/yellow as nav text */
-
+    background: #ffd700; /* Yellow background */
+    color: #4b0082;       /* Purple text */
     padding: 15px 25px;
     margin: 10px;
     border-radius: 8px;
     white-space: nowrap;
-
-    transition: background-color 0.3s ease;
-
-    transition: background-color 0.3s ease, color 0.3s ease;
-
+    transition: background-color 0.3s ease, transform 0.2s ease;
     cursor: pointer;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 .about-us ul li:hover {
-
-    background-color: #2b6cb0;
-
-    background-color: #2e1a47; /* header color */
-    color: white; /* contrast on hover */
-
+    background-color: #ffcf33;
+    transform: scale(1.05);
 }
 .contact-section {
-    background-color: #f1f1f1; /* Light grey background */
-    padding: 40px 20px;
+    background-color: #f3e6ff; /* Elegant lavender background */
+    padding: 50px 20px;
     text-align: center;
 }
 
 .contact-section h2 {
-
-    font-size: 32px;
-    color: #116c8f; /* Matching theme color */
-    margin-bottom: 20px;
-}
-
-contact-section h2 {
-    color: #2e1a47; /* match your header/nav color */
+    font-size: 36px;
+    color: #4b0082; /* Deep purple */
+    margin-bottom: 25px;
 }
 
 .contact-section p {
-    margin-bottom: 30px;
     font-size: 18px;
-    color: #555;
+    color: #333333; /* Dark gray for readability */
+    margin-bottom: 35px;
 }
 
 .contact-details {
     display: flex;
     justify-content: center;
     gap: 40px;
-    flex-wrap: wrap; /* Responsive support */
+    flex-wrap: wrap;
+    margin-bottom: 30px;
 }
 
 .contact-item {
-
     background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    width: 250px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 260px;
+    transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: scale(1.03);
 }
 
 .contact-item h3 {
-    margin-bottom: 10px;
-    color: #333;
+    margin-bottom: 12px;
+    color: #4b0082; /* Deep purple */
+    font-size: 22px;
 }
 
 .contact-item p {
     margin: 0;
-    font-size: 16px;
-
-    background-color: #3c264e;
-    color: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    width: 250px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 17px;
+    color: #444444;
 }
 
-.contact-item:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-    background-color: #2e1a47; /* deeper purple on hover */
-}
-
-.contact-item h3 {
-    color: #ffd700; /* yellow headings inside the box */
-}
-.contact-item p {
-    color: white;
-
-}
-
-
-.map {
-    margin-top: 30px;
-}
-
+/* Map iframe */
 .map iframe {
     width: 100%;
     height: 300px;
     border: 0;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 .order-section {
-
-    background-color: #f8f8f8;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.order-section h2 {
-    font-size: 32px;
-    color: #116c8f;
-}
-
-.order-section p {
-    margin-bottom: 20px;
-    font-size: 18px;
-    color: #555;
-}
-
-.order-form {
-    max-width: 500px;
-    margin: 0 auto;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-
-    background-color: #f5f0fa; /* soft lavender background */
+    background-color: #f5ebff; /* Light lavender background */
     padding: 60px 20px;
     text-align: center;
-    border-top: 3px solid #3c264e;
-    border-bottom: 3px solid #3c264e;
 }
 
 .order-section h2 {
     font-size: 36px;
-    color: #2e1a47; /* main purple */
-    font-weight: bold;
+    color: #4b0082; /* Deep purple */
     margin-bottom: 15px;
 }
 
 .order-section p {
+    font-size: 18px;
+    color: #333;
     margin-bottom: 30px;
-    font-size: 18px;
-    color: #4a4a6f;
 }
+
 .order-form {
-    max-width: 500px;
+    max-width: 600px;
     margin: 0 auto;
-    background: #3c264e; /* purple form background */
-    padding: 25px;
+    background: white;
+    padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-    color: white;
-}
-
-.input-group label {
-    font-weight: 600;
-    color: #ffd700; /* gold/yellow label */
-}
-
-.input-group input,
-.input-group select,
-.input-group textarea {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    margin-top: 5px;
-}
-
-.order-btn {
-    background-color: #ffd700; /* bright yellow button */
-    color: #3c264e; /* dark text */
-    padding: 12px 24px;
-    font-size: 18px;
-    border: none;
-    border-radius: 8px;
-    margin-top: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.order-btn:hover {
-    background-color: #e6c200;
-    transform: scale(1.05);
-
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .input-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     text-align: left;
 }
 
 .input-group label {
     font-size: 16px;
-    display: block;
+    color: #4b0082;
     margin-bottom: 5px;
+    display: block;
 }
 
 .input-group input,
-.input-group select,
 .input-group textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     font-size: 16px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 6px;
+    outline: none;
+}
+
+.input-group textarea {
+    resize: vertical;
+    min-height: 80px;
 }
 
 .payment-options {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     align-items: center;
+    margin-top: 10px;
 }
 
 .order-btn {
-
-    background-color: #116c8f;
-    color: white;
-
-    background-color: white;
-    color: #3c264e;
-
-    padding: 10px 20px;
+    background-color: #ffbb33;
+    color: #fff;
+    padding: 12px 24px;
     font-size: 18px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .order-btn:hover {
-
-    background-color: #0d5a73;
-
-    background-color: white;
-
+    background-color: #ffa500;
 }
+
 html {
     scroll-behavior: smooth;
 }
 
-
-
 .hero-section {
     height: 100vh; /* Full screen */
-    background-image: url('12.jpg');
+    background-image: url('static/12.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -558,4 +392,86 @@ html {
     font-size: 20px;
     line-height: 1.6;
 }
+.menu-container.beverages .dish img {
+  object-fit: contain;
+  width: 100%;
+  height: 220px;
+  background-color: white;
+  padding: 10px;
+}
+.menu-container.beverages .dish {
+  padding: 10px 0;
+}
 
+.site-footer {
+  background: linear-gradient(to right, #2e1a47, #4b006e);
+  color: #fff;
+  padding: 50px 20px 20px;
+  font-size: 16px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-logo h2 {
+  font-size: 28px;
+  color: #ffd700;
+}
+
+.footer-logo p {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #ddd;
+}
+
+.footer-links h4,
+.footer-social h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #ffd700;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #fff;
+}
+
+.footer-social .social-icons a {
+  font-size: 22px;
+  margin-right: 15px;
+  color: #ffd700;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.footer-social .social-icons a:hover {
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  color: #aaa;
+  font-size: 14px;
+}
