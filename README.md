@@ -2,7 +2,7 @@
 
 A modern, responsive restaurant website built with HTML and CSS. The website showcases the restaurant's menu, allows online ordering, and provides essential information to customers.
 
-website link: https://fork-spoon-aq5l.vercel.app/
+website link: https://fork-spoon-ptx6.vercel.app/
 
 ## Features
 
